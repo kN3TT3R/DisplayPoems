@@ -1,26 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CXC-NT-bhg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="HxK-Nt-oPP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CXC-NT-bhg" customClass="ViewController" customModule="DisplayPoem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="asD-lT-j6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="1pL-Ez-787"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="anr-yT-Xlf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-5H-7rb" userLabel="poemTextView">
+                                <rect key="frame" x="16" y="58" width="343" height="580"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aJ-Pu-FDS">
+                                <rect key="frame" x="259" y="28" width="100" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5aJ-Pu-FDS" secondAttribute="height" multiplier="10:3" id="VQD-YX-gjB" userLabel="width = 100"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="De zon"/>
+                                <connections>
+                                    <action selector="poemTwoButton:" destination="CXC-NT-bhg" eventType="touchUpInside" id="Vm4-Ee-6hI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-Ha-5rS">
+                                <rect key="frame" x="16" y="28" width="100" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YZ6-YX-tlD"/>
+                                </constraints>
+                                <state key="normal" title="Zomer"/>
+                                <connections>
+                                    <action selector="poemOneButton:" destination="CXC-NT-bhg" eventType="touchUpInside" id="F2P-FQ-KdP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5aJ-Pu-FDS" firstAttribute="trailing" secondItem="anr-yT-Xlf" secondAttribute="trailingMargin" id="0Mb-Ui-MFA"/>
+                            <constraint firstItem="SX3-Ha-5rS" firstAttribute="leading" secondItem="pxq-5H-7rb" secondAttribute="leading" id="3Qd-ZX-fjt"/>
+                            <constraint firstItem="1pL-Ez-787" firstAttribute="top" secondItem="pxq-5H-7rb" secondAttribute="bottom" constant="29" id="8JS-kM-pi9"/>
+                            <constraint firstItem="pxq-5H-7rb" firstAttribute="top" secondItem="SX3-Ha-5rS" secondAttribute="bottom" id="FTy-pp-fuh"/>
+                            <constraint firstItem="SX3-Ha-5rS" firstAttribute="top" secondItem="asD-lT-j6M" secondAttribute="bottom" constant="8" symbolic="YES" id="Lk4-hd-4h5"/>
+                            <constraint firstItem="5aJ-Pu-FDS" firstAttribute="baseline" secondItem="SX3-Ha-5rS" secondAttribute="baseline" id="Qux-Xe-7lB"/>
+                            <constraint firstItem="5aJ-Pu-FDS" firstAttribute="trailing" secondItem="pxq-5H-7rb" secondAttribute="trailing" id="Tz0-aq-s1b"/>
+                            <constraint firstItem="SX3-Ha-5rS" firstAttribute="leading" secondItem="anr-yT-Xlf" secondAttribute="leadingMargin" id="suv-To-1LN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poemTextView" destination="pxq-5H-7rb" id="pdz-z3-M1g"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPg-vW-5pc" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="11.25" y="41.197183098591552"/>
         </scene>
     </scenes>
 </document>
