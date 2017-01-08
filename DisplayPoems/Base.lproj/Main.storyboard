@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="HxK-Nt-oPP">
             <objects>
-                <viewController id="CXC-NT-bhg" customClass="ViewController" customModule="DisplayPoem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CXC-NT-bhg" customClass="ViewController" customModule="DisplayPoems" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="asD-lT-j6M"/>
                         <viewControllerLayoutGuide type="bottom" id="1pL-Ez-787"/>
